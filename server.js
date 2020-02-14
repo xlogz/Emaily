@@ -23,6 +23,9 @@ app.use(passport.session());
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
+console.log('using key for google client: ' + keys.googleClientID);
+console.log('using key for google client: ' + keys.googleClientSecret)
+
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
