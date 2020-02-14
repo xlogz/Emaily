@@ -25,6 +25,10 @@ passport.use(new GoogleStrategy({
 },async (accessToken, refreshToken, profile, done) => {
 
 	const existingUser = await User.find({googleId: profile.id});
+	console.log('attempting to find user from profile: ' + profile );
+	console.log('this is the google id: ' + profile.id);
+
+	console.log('this is the result of looking up existing user: ' + existingUser)
 
 	if(existingUser){
 		return done(null,existingUser);
