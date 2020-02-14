@@ -32,9 +32,13 @@ passport.use(new GoogleStrategy({
 
 	if(existingUser){
 		return done(null,existingUser);
-	}
-		 const user = await new User({googleId: profile.id}).save();
+	}else{
+		console.log('creating new user');
+		const user = await new User({googleId: profile.id}).save();
+		console.log('new user has been saved');
 		 done(null, user);
+	}
+		 
 	
 
 	// User.find({googleId: profile.id}).then((existingUser) => {

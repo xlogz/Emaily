@@ -26,6 +26,8 @@ mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: tru
 console.log('using key for google client: ' + keys.googleClientID);
 console.log('using key for google client: ' + keys.googleClientSecret)
 
+console.log('using key for mongo: ' + keys.mongoURI);
+
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
