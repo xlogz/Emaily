@@ -3,6 +3,7 @@ module.exports = {
 	googleClientSecret: 'dA1HnE7T49OV02pIgmZwJgfw',
 	mongoURI: 'mongodb://logan:Emaily123!@ds147797.mlab.com:47797/heroku_5375fkrz',
 	cookieKey: 'ksjdfasfjkasfhsakljfhajsfhjkflashfksljafhljhfakjshfkj',
-
+	stripePublishableKey: 'pk_test_8eMe2SOtQjRctJA3pAuXWTDz008VboyYpj',
+	stripeSecretKey: 'sk_test_MckmbjOwwh1NlToS00uKqWwT00LmeoMGe2'
 
 }
