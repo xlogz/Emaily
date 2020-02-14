@@ -1,7 +1,7 @@
 {
-  "name": "animate-phones",
+  "name": "emaily",
   "version": "1.0.0",
-  "description": "animating phones",
+  "description": "emaily",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",

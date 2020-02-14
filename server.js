@@ -33,6 +33,8 @@ if(process.env.NODE_ENV === 'production'){
 
 	//Express will serve uip the index.html file 
 	//if it doesnt recognize the route
+}else{
+	app.use(express.static(__dirname + '/public'));
 }
 
 const path = require('path');
@@ -46,13 +48,11 @@ app.get('*', (req, res) =>{
 //OAUTH clientsecret - dA1HnE7T49OV02pIgmZwJgfw
 
 
-// app.use(express.static(__dirname + '/public'));
 
 
-
-// app.get('/', function(req,res){
-// 	res.render('index');
-// })
+app.get('/', function(req,res){
+	res.render('index');
+})
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
