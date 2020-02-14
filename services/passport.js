@@ -30,8 +30,8 @@ passport.use(new GoogleStrategy({
 
 	console.log('this is the result of looking up existing user: ' + existingUser)
 
-	if(existingUser){
-		console.log('user found: ',existingUser);
+	if(existingUser[0]){
+		console.log('user found: ',existingUser[0]);
 		return done(null,existingUser);
 	}else{
 		console.log('creating new user');
