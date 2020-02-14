@@ -28,7 +28,7 @@ module.exports = app => {
 		
 		sgMail.setApiKey(keys.sendGridKey);
 			const msg = {
-				to: 'loganxlow@stoletheinter.net',
+				to: 'logan@stoletheinter.net',
 				from: 'noreply@stoletheinter.net',
 				subject: 'Sending with Twilio SendGrid is Fun',
 				text: 'and easy to do anywhere, even with Node.js',
