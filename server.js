@@ -4,7 +4,9 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 const bodyParser = require('body-parser');
-require('./models/User.js');
+require('./models/User');
+require('./models/Recipient')
+require('./models/Survey')
 require('./services/passport.js');
 
 
@@ -30,6 +32,7 @@ console.log('using key for mongo: ' + keys.mongoURI);
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if(process.env.NODE_ENV === 'production'){
 	// Express will serve up production assets
